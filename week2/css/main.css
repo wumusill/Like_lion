@@ -3,3 +3,96 @@ div{
     height: 100px;
     background-color: blue;
 }
+
+/* cmd + ? */
+/* 
+    선택자{
+        속성 : 값;
+        속성 : 값;
+    } 선택자는 스타일 적용 범위 
+*/
+
+/* css 선언 방식 : 내장 방식, 링크 방식, 인라인 방식, @import 방식 */
+
+/* css 선택자 : 기본, 복합, 가장 클래스, 가상 요소, 속성 */
+
+/* 기본 선택자
+*{} : 전체 선택자, 
+li{} : 태그 선택자,
+.orange{} : 클래스 선택자, <span class = 'orange'>오렌지</span>
+#orange{} : id 선택자, <span id = 'orange'>오렌지</span>
+*/
+
+/* 복합 선택자
+span.orange{} : 일치 선택자 -> span, class = 'orange' 동시 만족하는 요소 선택, 각각의 선택자를 붙여쓰면 됨, 태그 선택자는 맨 앞에
+ul > .orange{} : 자식 선택자
+div .orange{} : 하위(후손) 선택자 -> '띄어쓰기'가 선택자의 기호, 자식 선택자보다 많이 쓰임 
+*/
+
+/* 가상 선택자
+a:hover{} : 마우스 커서가 올라가 있을 때 선택 됨
+div{
+  width:100px;
+  height:100px;
+  background-color:orange;
+  transition:1s;
+}
+div:hover{
+  width:300px;
+  height:300px;
+}
+*/
+
+/* css 스타일 상속 : 부모(조상) 요소에 속성을 걸어주면 자식(후손) 요소에게 적용 됨, 모두 상속 되는 것은 아니다. */
+/* 선택자 우선순위 : 점수가 높은 선언이 우선, 점수가 같으면 가장 마지막에 해석된 선언이 우선, 요소를 구체적으로 지목할수록 점수가 높다. */
+
+
+/* css 속성 */
+
+/* width, height : 요소의 가로/세로 너비, auto : 브라우저가 너비를 계산, 단위 : px, vw, em etc 
+
+ margin : 요소의 외부 여백(공간)을 지정하는 단축 속성, 0: 외부 여백 없음, auto : 브라우저가 여백을 계산 (가운데 정렬), 단위 : px, vw, em, etc 
+ margin 속성
+ margin: 10px; : 4방위 여백
+ margin: 10px 20px; : 상하 좌우
+ margin: 상, 좌우, 하;
+ margin: 상, 우, 하, 좌; : 시계방향
+ 
+ margin-top
+ margin-bottom
+ margin-left
+ margin-right 로 방향 지정 가능
+
+ <div class = "con">
+  <div class = 'item'></div>
+  <div class = 'item'></div>
+  <div class = 'item'></div>
+</div>
+
+ con{
+  
+}
+.item{
+  width:100px;
+  height:100px;
+  background-color:orange;
+  margin-bottom:20px;
+}
+
+padding : 요소의 내부 여백(공간)을 지정하는 단축 속성, 0 : 내부 여백 없음, 단위 : px, vw, em, etc
+ 
+border : 요소의 테두리 선을 지정하는 단축 속성
+border:선-두께 선-종류 선-색상;
+border-방향
+border-radius : 모서리를 둥글게 깎음 
+.item{
+  width:100px;
+  height:100px;
+  background-color:orange;
+  margin-bottom:10px;
+  border:2px solid green;
+  border-radius:5px;
+}
+*/
+
+
