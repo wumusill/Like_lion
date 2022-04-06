@@ -198,9 +198,8 @@ div:hover{
 
 ### (6) overflow
 * 요소의 크기 이상으로 내용이 넘쳤을 때, 보여짐을 제어하는 단축 속성
-* visible `(default)` : 넘친 내용을 그대로 보여줌
-* 
-
+* `overflow:visible;` : 넘친 내용을 그대로 보여줌 `(default)`
+  
 ```html
 <div class="parent">
   <div class="child"></div>
@@ -225,8 +224,7 @@ div:hover{
 <br>
 
 ### (7) display
-* 요소의 화면 출력(보여짐) 특성
-* 
+* 요소의 화면 출력(보여짐) 특성 
 ```html
 <span>hello world!</span>
 ```
@@ -281,9 +279,9 @@ div{
   height:200px;
   background-color:orange;
   background-image:url("이미지 경로");
-  background-size:200px; /* 이미지 사이즈 조절 */
-  background-repeat:no-repeat; /* 바둑판 배열 끄기 */
-  background-position:center; /* 이미지 가운데 정렬 */
+  background-size:200px;    /* 이미지 사이즈 조절 */
+  background-repeat:no-repeat;  /* 바둑판 배열 끄기 */
+  background-position:center;   /* 이미지 가운데 정렬 */
 }
 ```
 

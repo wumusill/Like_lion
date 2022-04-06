@@ -1,0 +1,41 @@
+body{
+    margin: auto;
+}
+
+h1{
+    width: 175px;
+    margin: auto;
+}
+
+.privacy{
+    text-align: center;
+}
+
+div.namebirth{
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+#mbti{
+    width: 350px;
+    border:5px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+
+.q1{
+    width: 360px;
+    margin: auto;
+}
+
+ul{
+    width: 350;
+    text-align: center;
+}
+
+li{
+    text-align: center;
+}
