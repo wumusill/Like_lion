@@ -33,9 +33,18 @@ div.namebirth{
 
 ul{
     width: 350;
-    text-align: center;
 }
 
-li{
+button{
+    width: 200px;
+    height: 100px;
     text-align: center;
+    transition: 0.5s;
+    opacity: 0.4;
+    background-color: aquamarine;
+}
+
+button:hover{
+    transform: scale(1.5);
+    opacity: 1;
 }
