@@ -49,7 +49,7 @@ print(abc.count)
 class MinusCal(SumCal):
     def __init__(self, num):
         # 부모 클래스의 속성을 가져오는 두 코드
-        SumCal.__init__(num)
+        SumCal.__init__(self, num)
         # super().__init__(num)
     
     def minus(self, b):
@@ -63,7 +63,7 @@ cal4 = SumCal(4)
 print(cal3.sum(3))
 print(cal4.sum(4))
 
-# cal5 = MinusCal(5)
-# print(cal5.result)
-# print(cal5.sum(3))
-# print(cal5.minus(4))
+cal5 = MinusCal(5)
+print(cal5.result)
+print(cal5.sum(3))
+print(cal5.minus(4))
