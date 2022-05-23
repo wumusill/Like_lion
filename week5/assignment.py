@@ -1,34 +1,34 @@
-# # 1번
-# def plus(num_1, num_2):
-#     return num_1 + num_2
+# 1번
+def plus(num_1, num_2):
+    return num_1 + num_2
 
-# def minus(num_1, num_2):
-#     return num_1 - num_2
+def minus(num_1, num_2):
+    return num_1 - num_2
 
-# def multi(num_1, num_2):
-#     return num_1 * num_2
+def multi(num_1, num_2):
+    return num_1 * num_2
 
-# def divide(num_1, num_2):
-#     return num_1 / num_2
+def divide(num_1, num_2):
+    return num_1 / num_2
 
-# while True:
-#     num_1, num_2 = map(int, input("연산을 진행할 두 숫자를 입력하시오 : ").split())
-#     cmd = input("어떠한 연산을 수행할까요? ")
+while True:
+    num_1, num_2 = map(int, input("연산을 진행할 두 숫자를 입력하시오 : ").split())
+    cmd = input("어떠한 연산을 수행할까요? ")
 
-#     if cmd == '+':
-#         print("{} {} {} = {}\n".format(num_1, cmd, num_2, plus(num_1, num_2)))
+    if cmd == '+':
+        print("{} {} {} = {}\n".format(num_1, cmd, num_2, plus(num_1, num_2)))
     
-#     elif cmd == '-':
-#         print("{} {} {} = {}\n".format(num_1, cmd, num_2, minus(num_1, num_2)))
+    elif cmd == '-':
+        print("{} {} {} = {}\n".format(num_1, cmd, num_2, minus(num_1, num_2)))
     
-#     elif cmd == '*':
-#         print("{} {} {} = {}\n".format(num_1, cmd, num_2, multi(num_1, num_2)))
+    elif cmd == '*':
+        print("{} {} {} = {}\n".format(num_1, cmd, num_2, multi(num_1, num_2)))
     
-#     elif cmd == '/':
-#         print("{} {} {} = {}\n".format(num_1, cmd, num_2, divide(num_1, num_2)))
+    elif cmd == '/':
+        print("{} {} {} = {}\n".format(num_1, cmd, num_2, divide(num_1, num_2)))
     
-#     else:
-#         print("해당 연산은 지원하지 않습니다.\n")
+    else:
+        print("해당 연산은 지원하지 않습니다.\n")
 
     
 # 2번
