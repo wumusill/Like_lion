@@ -1,0 +1,12 @@
+<h1>django form을 이용한 새 글 작성 페이지</h1>
+<form action="" method = "POST">
+    {% csrf_token %}
+    <!--view.py에서 넘겨받은 form 받는 방법 : 중괄호 두 개로 감싸기-->
+    <!--form.as_table : table 태그로 감싸진 형태로 받음
+        form.as_p : p 태그로 감싸진 형태로 받음
+        form.as_ul : ul 태그로 감싸진 형태로 받음-->
+    <table>
+        {{ form }}
+    </table>
+    <input type="submit" value="새 글 생성하기">
+</form>
