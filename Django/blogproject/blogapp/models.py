@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 from django.forms import model_to_dict
 
@@ -5,7 +6,8 @@ from django.forms import model_to_dict
 class Blog(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
-    date = models.DateTimeField(auto_now=True)
+    photo = models.ImageField(blank=True, null=True, upload_to='blog_photo')
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title

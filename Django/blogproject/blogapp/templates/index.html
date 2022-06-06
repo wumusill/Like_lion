@@ -1,6 +1,14 @@
 <h1>My Simple Blog</h1>
 
 
+{% for post in posts %}
+    <a href="{% url 'detail' post.id %}"><h3>제목 : {{ post.title }}</h3></a>
+    <h4>작성 날짜 : {{ post.date }}</h4>
+    django가 만든, 블로그 객체 생성 순서에 해당하는 보이지 않는 primary key : {{ post.id }}
+{% endfor %}
+<br><br><br>
+<!--
 <a href="{% url 'new' %}">HTML을 이용한 새 글 작성</a><br>
 <a href="{% url 'formcreate' %}">django form을 이용한 새 글 작성</a><br>
+-->
 <a href="{% url 'modelformcreate' %}">django model form을 이용한 새 글 작성</a>
