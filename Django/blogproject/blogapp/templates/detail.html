@@ -7,9 +7,23 @@
 <h3>본문</h3>
 {{ blog_detail.body }}
 
-<h3>본문</h3>
+<h3>본문에 추가된 첨부파일</h3>
 {% if blog_detail.photo %}
     <!-- 사진 찍어주기 -->
     {{ blog_detail.photo.url }}
     <img src="{{ blog_detail.photo.url }}" alt="" height="300">
 {% endif %}
+
+<h3>댓글</h3>
+<form method="POST" action="{% url 'create_comment' blog_detail.id %}">
+    <!-- django에서 form을 이용해 post 요청을 보낼 때, 보안을 위해 csrf 토큰을 입력해줘야 함 -->
+    {% csrf_token %}
+    {{ comment_form }}
+    <input type="submit">
+</form>
+<hr>
+<!-- 댓글 목록들 -->
+{% for comment in blog_detail.comment_set.all %}
+<p>{{ comment }}</p>
+<hr>
+{% endfor %}
