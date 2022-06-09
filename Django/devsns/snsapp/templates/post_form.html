@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>새 글 작성</h1>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    <!-- form을 이용해 POST 요청을 보낼 때 보안을 위해서 토큰 입력을 해줘야 함-->
+    {% csrf_token %}
+    <table>
+        <!-- views.postcreate에서 보낸 form을 받는 방법 -->
+        {{form.as_table}}
+    </table>
+    <input type="submit" value="새 글">
+</form>
+
+{% endblock %}
