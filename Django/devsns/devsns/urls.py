@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('postcreate', views.postcreate, name='postcreate'),
+    # post_id라는 정수형 데이터를 넘겨 주면서 함수 호출
+    path('detail/<int:post_id>', views.detail, name='detail'),
 ]

@@ -1,9 +1,14 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from .forms import PostForm
+from .models import Post
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    # Post에 있는 모든 객체들을 가져오는 코드
+    # posts = Post.objects.all()
+    # Post의 객체를 filter를 통해 가져오는 코드
+    posts = Post.objects.filter().order_by('-date')
+    return render(request, 'index.html', {'posts':posts})
 
 def postcreate(request):
     # request method가 POST일 경우
@@ -20,3 +25,7 @@ def postcreate(request):
         form = PostForm()
     # post_form.html을 열고 객체 form을 'form'이란 이름으로 함께 보냄
     return render(request, 'post_form.html', {'form':form})
+
+def detail(request, post_id):
+    post_detail = get_object_or_404(Post, pk=post_id)
+    return render(request, 'detail.html', {'post_detail':post_detail})
