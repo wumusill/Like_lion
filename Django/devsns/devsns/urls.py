@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from snsapp import views
+from accounts import views as accounts_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,6 @@ urlpatterns = [
     # post_id라는 정수형 데이터를 넘겨 주면서 함수 호출
     path('detail/<int:post_id>', views.detail, name='detail'),
     path('new_comment/<int:post_id>', views.new_comment, name='new_comment'),
+    path('login/', accounts_views.login, name='login'),
+    path('logout/', accounts_views.logout, name='logout'),
 ]
