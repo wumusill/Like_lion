@@ -23,4 +23,5 @@ urlpatterns = [
     path('postcreate', views.postcreate, name='postcreate'),
     # post_id라는 정수형 데이터를 넘겨 주면서 함수 호출
     path('detail/<int:post_id>', views.detail, name='detail'),
+    path('new_comment/<int:post_id>', views.new_comment, name='new_comment'),
 ]
