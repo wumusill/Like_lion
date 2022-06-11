@@ -21,10 +21,17 @@ from accounts import views as accounts_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    
     path('postcreate', views.postcreate, name='postcreate'),
     # post_id라는 정수형 데이터를 넘겨 주면서 함수 호출
     path('detail/<int:post_id>', views.detail, name='detail'),
     path('new_comment/<int:post_id>', views.new_comment, name='new_comment'),
+
     path('login/', accounts_views.login, name='login'),
     path('logout/', accounts_views.logout, name='logout'),
+
+    path('freehome/', views.freehome, name='freehome'),
+    path('freepostcreate/', views.freepostcreate, name='freepostcreate'),
+    path('freedetail/<int:post_id>', views.freedetail, name='freedetail'),
+    path('new_freecomment/<int:post_id>', views.new_freecomment, name='new_freecomment'),
 ]
