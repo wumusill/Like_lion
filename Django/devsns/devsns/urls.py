@@ -29,9 +29,10 @@ urlpatterns = [
 
     path('login/', accounts_views.login, name='login'),
     path('logout/', accounts_views.logout, name='logout'),
+    path('signup/', accounts_views.signup, name='signup'),
 
     path('freehome/', views.freehome, name='freehome'),
     path('freepostcreate/', views.freepostcreate, name='freepostcreate'),
     path('freedetail/<int:post_id>', views.freedetail, name='freedetail'),
-    path('new_freecomment/<int:post_id>', views.new_freecomment, name='new_freecomment'),
+    path('new_freecomment/<int:post_id>', views.new_freecomment, name='new_freecomment'),   
 ]

@@ -1,6 +1,8 @@
 from django.shortcuts import redirect, render
 # 로그인 로그아웃을 구현하기 위한 import
 from django.contrib import auth
+# 회원가입 처리를 위한 import
+from django.contrib.auth.models import User
 
 def login(request):
     # request == POST
@@ -26,3 +28,14 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('home') 
+
+def signup(request):
+    if request.method == 'POST':
+        if request.POST['password'] == request.POST['repeat']:
+            # 회원가입
+            new_user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'])
+            # 로그인
+            auth.login(request, new_user)
+            # 홈으로 리다이렉션
+            return redirect('home')
+    return render(request, 'register.html')
