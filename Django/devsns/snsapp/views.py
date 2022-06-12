@@ -2,6 +2,7 @@ from tkinter import PROJECTING
 from django.shortcuts import redirect, render, get_object_or_404
 from .forms import FreeCommentForm, FreePostForm, PostForm, CommentForm
 from .models import FreePost, Post
+from django.core.paginator import Paginator
 
 # Create your views here.
 def home(request):
@@ -9,6 +10,10 @@ def home(request):
     # posts = Post.objects.all()
     # Post의 객체를 filter를 통해 가져오는 코드
     posts = Post.objects.filter().order_by('-date')
+    # 객체들의 목록을 끊어주는 코드
+    paginator = Paginator(posts, 5)
+    pagnum = request.GET.get('page')
+    posts = paginator.get_page(pagnum)
     return render(request, 'index.html', {'posts':posts})
 
 
