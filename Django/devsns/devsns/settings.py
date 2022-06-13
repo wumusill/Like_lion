@@ -40,7 +40,28 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'snsapp',
     'accounts',
+    # 소셜 로그인 기능 구현
+    # https://django-allauth.readthedocs.io/en/latest/installation.html
+    # pip install django-allauth 입력 후 아래 코드 추가
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # provider 등록
+    'allauth.socialaccount.providers.google',
 ]
+
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+LOGIN_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
