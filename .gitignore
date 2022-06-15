@@ -1,3 +1,6 @@
 # no secrets.json files
 *secrets.json
 DO/
+*apitestsecret.py
+*secrets.py
+*venv/
