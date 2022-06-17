@@ -1,4 +1,5 @@
-<h1>영화 리뷰 웹 서비스</h1>
+<h1>검색 기능 구현</h1>
+
 {% for o in obj %}
 
 <a href="{% url 'detail' o.id %}">영화상세보기</a>
@@ -12,10 +13,3 @@
 <br><br><br>
 
 {% endfor %}
-
-
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="submit">
-</form>
