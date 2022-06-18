@@ -39,3 +39,6 @@ def detail(request, movie_id):
     resdata = response.text
 
     return render(request, 'detail.html', {"resdata":resdata})
+
+def base(request):
+    return render(request, 'base.html')

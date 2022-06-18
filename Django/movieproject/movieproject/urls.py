@@ -6,4 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('detail/<str:movie_id>', views.detail, name='detail'),
+    path('base/', views.base, name='base'),
 ]
