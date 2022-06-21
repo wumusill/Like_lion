@@ -24,9 +24,13 @@ def get_secret(setting, secrets = secrets):
 
 SECRET_KEY = get_secret("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# 배포전 False로 해야 함
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# python anywhere id
+ALLOWED_HOSTS = [
+    'wumusill'
+]
 
 
 # Application definition
