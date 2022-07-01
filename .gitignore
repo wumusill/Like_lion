@@ -7,6 +7,13 @@ DO/
 static/
 demo/
 *api.py
+assets/
+forms/
+css/
+img/
+js/
+scss/
+vendor/
 
 # Created by https://www.toptal.com/developers/gitignore/api/django
 # Edit at https://www.toptal.com/developers/gitignore?templates=django
